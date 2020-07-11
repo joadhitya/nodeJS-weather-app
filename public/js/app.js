@@ -28,7 +28,7 @@ weatherForm.addEventListener('submit', (e) => {
                 message1.textContent = data.error
             }else{                
                 message1.textContent = data.location
-                message2.textContent = 'The weather is '+data.forecast.description+ '. It is ' +data.forecast.temperature+ ' F , but it feels like ' +data.forecast.feels+ ' F.'
+                message2.textContent = 'The weather is '+data.forecast.description+ '. It is ' +data.forecast.temperature+ ' F , but it feels like ' +data.forecast.feels+ ' F. '+data.forecast.summary+'.'
             }
         })
     })

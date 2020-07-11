@@ -15,10 +15,12 @@ const forecast = (longitude, latitude, callback) => {
         } else if (body.error) {
             callback('Please select location correctly', undefined)
         } else {
+            console.log(body)
             callback(undefined, {
                 description: body.current.weather_descriptions[0],
                 temperature: body.current.temperature,
-                feels: body.current.feelslike
+                feels: body.current.feelslike,                
+                summary : 'The humidity around '+ body.current.feelslike + '%'
             })
 
             // message = response.body.current.weather_descriptions[0] + '. It currently ' + response.body.current.temperature + " degree but it feels like " + response.body.current.feelslike + " degree";
